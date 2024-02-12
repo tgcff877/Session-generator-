@@ -11,7 +11,7 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(text="❈ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 ❈", url=SUPPORT_CHAT),
             InlineKeyboardButton(
-                text="❈ 𝐎𝐩𝐥𝐞𝐞𝐜𝐡 ❈", url="https://t.me/Opleech"
+                text="❈ 𝐎𝐩𝐥𝐞𝐞𝐜𝐡 ❈", url="https://t.me/Opleech_WD"
             ),
         ],
     ]
