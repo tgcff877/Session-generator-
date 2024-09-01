@@ -1,0 +1,10 @@
+
+services:
+  - type: web
+    name: SessionGenerator
+    env: python
+    runtime:
+      version: '3.9.5'
+    src: .
+    command: python app.py
+    port: 8000
