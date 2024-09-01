@@ -1,7 +1,10 @@
 
-# render.yaml
 services:
   - type: web
     name: session-generator
-    env:
-      PORT: 8080
+    env: python
+    runtime:
+      version: '3.9.0'
+    ports:
+      - port: 8080
+    startCommand: python SessionGenerator.py
