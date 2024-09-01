@@ -1,20 +1,14 @@
 
-import http.server
-import socketserver
+# app.py
+from flask import Flask
+from session_generator import SessionGenerator
 
-PORT = 8000
+app = Flask(__name__)
 
-class SessionGeneratorHandler(http.server.BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
-        self.end_headers()
-        self.wfile.write(b"SessionGenerator is running!")
+@app.route('/')
+def index():
+    return 'Session Generator is running!'
 
-def run_server():
-    with socketserver.TCPServer(("", PORT), SessionGeneratorHandler) as httpd:
-        print(f"SessionGenerator is running on port {PORT}")
-        httpd.serve_forever()
-
-if __name__ == "__main__":
-    run_server()
+if __name__ == '__main__':
+    SessionGenerator().start()
+    app.run(port=8080)
